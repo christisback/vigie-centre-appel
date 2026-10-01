@@ -13,8 +13,11 @@ Centre d'appel interne pour C.T Informatique, séparé de Vigie Billets mais par
 - Ligne téléphonique externe réelle via un fournisseur de voix infonuagique (Telnyx), pour recevoir des appels de l'extérieur
 - Files d'attente, création automatique de billets à partir d'un appel
 
+## Installation
+
+Installateur Windows signé disponible dans les [releases](https://github.com/christisback/vigie-centre-appel/releases/latest) - installe en service (`VigieCentreAppel`), génère automatiquement le certificat HTTPS. Nécessite que Vigie Billets soit déjà installé sur le même poste (réutilise son Node.js, PostgreSQL, base de données et secret de connexion).
+
 ## Technique
 
 - Node.js + Express, PostgreSQL (`tickets_db`, partagée avec Vigie Billets)
 - Port 3504 (HTTP), 3505 (HTTPS - certificat via `generer-certificat-https.ps1`, requis pour l'accès au micro hors `localhost`)
-- Pas encore d'installateur (déploiement manuel pour l'instant)
