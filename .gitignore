@@ -1,0 +1,13 @@
+node_modules/
+
+# Outils d'installation tiers (nssm.exe, certificat) - vivent avec l'installateur, pas le code
+_setup/
+
+# Secrets et fichiers générés à l'installation/exécution
+.env
+IMPORTANT - Identifiants.txt
+install-log.txt
+service-out.log
+service-err.log
+tray.pid
+certs/
